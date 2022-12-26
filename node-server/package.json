@@ -1,0 +1,28 @@
+{
+  "name": "cc-server",
+  "version": "1.0.0",
+  "description": "Back-end server for currency-converter app",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js",
+    "local": "pm2 start ecosystem.config.js --env='local' --no-daemon"
+  },
+  "author": "sanath",
+  "license": "ISC",
+  "dependencies": {
+    "@okta/oidc-middleware": "^4.0.2",
+    "axios": "^0.18.0",
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "config": "^3.3.2",
+    "cors": "^2.8.5",
+    "cron": "^1.1.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mysql2": "^2.2.5",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "sequelize": "^6.3.5",
+    "sha1": "^1.1.1"
+  }
+}

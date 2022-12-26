@@ -1,0 +1,12 @@
+{
+  "dbConfig": {
+    "mysql": {
+      "host":     "localhost",
+      "database": "currency_converter",
+      "username": "root",
+      "password": "root"
+    }
+  },
+  // Move it to a secret manager or something.
+  "exchangeRateKey": "4e8f90f55be194ed89be538d4f9af3ce"
+}

@@ -1,0 +1,55 @@
+<div class="container vh-center">
+  <div class="currency-card">
+    <!-- Title -->
+    <div class="title">
+      Currency Converter
+    </div>
+
+    <!-- Input amount -->
+    <div class="amount">
+      <label class="form-label">Amount</label>
+      <div class="form-group">
+        <input [(ngModel)]="amount" type="number" min="0" step="20" class="form-control" placeholder="For ex: 25">
+      </div>
+    </div>
+
+    <!-- From and to -->
+    <div class="currency-group">
+      <div class="currency-group__from-to">
+        <label class="form-label">From</label>
+        <div class="currency-group__select-wrapper">
+          <app-select [select]="fromCurrencySelect" [value]="fromCurrencySelect.selectedValue"
+            (itemSelected)="fromCurrencySelect.onSelected($event)"></app-select>
+        </div>
+      </div>
+      <div class="currency-group__swap">
+        <button class="currency-group__swap-btn vh-center" (click)="swapSelectedCurrency()">
+          <img class="currency-group__swap-btn__icon" src="assets/icons/swap.png">
+        </button>
+      </div>
+      <div class="currency-group__from-to">
+        <label class="form-label">To</label>
+        <div class="currency-group__select-wrapper">
+          <app-select [select]="toCurrencySelect" [value]="toCurrencySelect.selectedValue"
+            (itemSelected)="toCurrencySelect.onSelected($event)"></app-select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Convert button -->
+    <div class="convert vh-center" (click)="getRate()">
+      Convert
+    </div>
+
+    <!-- Converted amount -->
+    <div class="final">
+      <label class="form-label">=</label>
+      <label class="form-label final__amount">{{calculatedConversion}}</label>
+    </div>
+
+    <!-- Last updated on -->
+    <span *ngIf="latestUpdate" class="currency-group__update-text">
+      Exchange rates last updated on: <br> {{latestUpdate | date:'medium'}}
+    </span>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<!-- Select Dropdown -->
+<ng-select #dropdownSelect *ngIf="select" [items]="select.items" [clearable]="select.clearable" [virtualScroll]="select.virtualScroll" [searchable]="select.searchable === false ? select.searchable : true"
+  [addTag]="select.addTag" [dropdownPosition]="select.position ? select.position : 'auto'" [placeholder]="select.placeholder" [(ngModel)]="value" (change)="selected($event)" (open)="open()" (blur)="blur()" [readonly]="select.disabled || disabled"
+  (search)="onSearch($event)" [searchFn]="select.customSearch ? customSearch: null" (focus)="onFocus()" (scroll)="onScroll($event)" (scrollToEnd)="onScrollToEnd()" [notFoundText]="select.notFoundText" (clear)="clear()" (close)="close()" [editableSearchTerm]="select.editableSearchTerm" [clearOnBackspace]="select.clearOnBackspace"
+  [ngClass]="{'ng-invalid': ngControl?.invalid && (ngControl?.dirty || ngControl?.touched) && !select.labelledSelect, 
+  'select-dropdown': !select.source, 'filter-dropdown': select.source === 'filter',
+  'row-limit-dropdown': select.source === 'row-limit', 'custom-template-options': select.customTemplate || select.isLabelledSelect}">
+</ng-select>

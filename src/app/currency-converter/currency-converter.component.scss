@@ -1,0 +1,174 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  background-image: linear-gradient(-90deg, #a405af, #ce0864);
+}
+
+.title {
+  margin-bottom: 20px;
+
+  width: 100%;
+
+  font-size: 25px;
+  text-align: center;
+  line-break: auto;
+  letter-spacing: 3px;
+}
+
+.currency-card {
+  width: 385px;
+  
+  background-color: #fff;
+
+  border-radius: 10px;
+
+  padding: 30px;
+
+  box-shadow: 0 20px 20px rgb(0 0 0 / 30%);
+}
+
+.amount {
+  margin-bottom: 20px;
+}
+
+.amount .form-label,
+.currency-group .form-label {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #999;
+
+  font-size: 17px;
+}
+
+.amount .form-control {
+  padding-left: 15px;
+  padding-right: 15px;
+
+  margin-top: 5px;
+
+  // width: 100% !important;
+  height: 38px;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  border: 1px solid #ccc;
+
+  border-radius: 5px;
+
+  transition: all .35s;
+
+  &::placeholder {
+    font-size: 15px;
+
+    font-weight: normal;
+  }
+}
+
+.amount .form-control:focus {
+  border: 1px solid #519EEB;
+  color: #a405af;
+}
+
+.currency-group {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 100%;
+
+  &__select-wrapper {
+    width: 150px;
+  }
+
+  &__update-text {
+    margin-top: 20px;
+
+    color: grey;
+
+    font-size: 12px;
+  }
+
+  &__swap {
+    display: flex;
+
+    align-items: end;
+  }
+
+  &__swap-btn {
+    margin: 0 20px;
+
+    flex-shrink: 0;
+
+    width: 48px;
+    height: 48px;
+
+    background-color: #a405af;
+
+    background-image: linear-gradient(45deg, #ffffff, #ffffff);
+
+    color: #fff;
+
+    font-size: 18px;
+
+    border-radius: 100%;
+    border: 0;
+
+    transition: all 1s ease-out;
+
+    cursor: pointer;
+
+    &__icon {
+      height: 25px;
+      width: 25px;
+    }
+
+    &__icon:hover {
+      height: 27px;
+      width: 27px;
+    }
+  }
+}
+
+.convert {
+  padding: 0px 5px 1px 5px;
+  margin-top: 20px;
+
+  width: 70px;
+  height: 40px;
+
+  color: white;
+
+  background-image: linear-gradient(to right, #895cf2 0%, #ffabf4 50%, #895cf2 100%);  transition: 0.5s;
+  background-size: 300% 300%;
+
+  font-size: 16px;
+
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 6px rgb(50 50 93 / 11%), 0 1px 3px rgb(0 0 0 / 8%);
+
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  &:hover {
+    background-position: right center;
+  }
+}
+
+.final {
+  margin-top: 20px;
+
+  &__amount {
+    margin-left: 5px;
+
+    font-weight: bold;
+  }
+}
+
+.final .form-label {
+  font-size: 25px;
+}

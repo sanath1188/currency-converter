@@ -1,0 +1,64 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@ng-select/ng-select/themes/default.theme.css";
+@import '~ngx-toastr/toastr';
+
+$secondary-color: ("base": #474B6D,
+  "lighten-5": #FCFCFD,
+  "lighten-4": #E9E9F0,
+  "lighten-3": #C5C5DB,
+  "lighten-2": #AFB2C9,
+  "lighten-1": #8D90AA,
+  "darken-1": #414564,
+  "darken-2": #383B5A,
+  "darken-3": #262A48,
+  "darken-4": #151731);
+
+$info-color: ("base": #519EEB,
+  "lighten-5": #F8FCFF,
+  "lighten-4": #EBF5FF,
+  "lighten-3": #B4D3F2,
+  "lighten-2": #91C0EF,
+  "lighten-1": #70AFED,
+  "darken-1": #428FDB,
+  "darken-2": #327BC3,
+  "darken-3": #2569AC,
+  "darken-4": #1A5895);
+  
+@import './custom-select.scss';
+
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  cursor: pointer;
+}
+
+button,
+input,
+select {
+  outline: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  margin: 0;
+
+  -webkit-appearance: none;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.vh-center {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}

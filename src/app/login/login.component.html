@@ -1,0 +1,36 @@
+<section class="vh-center">
+    <div class="container">
+        <div class="d-flex user panel-signin">
+            <div class="img-panel"><img src="assets/login/main.jpg" alt="" [@EnterLeaveLeft]="'flyIn'" /></div>
+            <div class="vh-center form-panel" [@EnterLeaveRight]="'flyIn'">
+                <form action="" onsubmit="return false;">
+                    <h2>Sign in</h2>
+                    <input [(ngModel)]="email" [ngModelOptions]="{standalone: true}" type="text" name="" placeholder="Email" />
+                    <input [(ngModel)]="password" [ngModelOptions]="{standalone: true}" type="password" name="" placeholder="Password" />
+                    <input type="submit" (click)="login()" name="" value="Login" />
+                    <p class="signup-btn">
+                        Don't have an account? <br>
+                        <a (click)="toggleForm()">Sign up</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+        <div class="d-flex user panel-signup">
+            <div class="vh-center form-panel">
+                <form action="" onsubmit="return false;">
+                    <h2>Create an account</h2>
+                    <input type="text" name="" placeholder="Username" />
+                    <input type="email" name="" placeholder="Email Address" />
+                    <input type="password" name="" placeholder="Create Password" />
+                    <input type="password" name="" placeholder="Confirm Password" />
+                    <input type="submit" name="" value="Sign Up" />
+                    <p class="signup-btn">
+                        Already have an account? <br>
+                        <a (click)="toggleForm()">Sign in</a>
+                    </p>
+                </form>
+            </div>
+            <div class="img-panel"><img src="assets/login/hey.jpg" alt="" /></div>
+        </div>
+    </div>
+</section>
