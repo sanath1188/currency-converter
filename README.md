@@ -5,13 +5,13 @@
 2. Set the database up:
     - Create a database as given in the db.js file and run the following command to create the table.
       ```CREATE TABLE `conversion` (```
-      ````id` int(11) NOT NULL AUTO_INCREMENT,```
-      ````currency` varchar(10) NOT NULL,```
-      ````exchange_rate` decimal(30,12) NOT NULL,```
-      ````updated_on` DATETIME NOT NULL,```
-      ````invalid` tinyint(1),```
-      ```PRIMARY KEY (`id`),```
-      ```KEY `conversion_by_currency` (`currency`) USING BTREE```
+      ```id int(11) NOT NULL AUTO_INCREMENT,```
+      ```currency varchar(10) NOT NULL,```
+      ```exchange_rate decimal(30,12) NOT NULL,```
+      ```updated_on DATETIME NOT NULL,```
+      ```invalid tinyint(1),```
+      ```PRIMARY KEY (id),```
+      ```KEY conversion_by_currency (currency) USING BTREE```
       ```) ENGINE=InnoDB DEFAULT CHARSET=utf8;```
 
     - Once done, modify the cron job (index.js file in the cron folder) to run every minute so the table gets populated.
