@@ -1,10 +1,10 @@
 # currency-converter
 An app that converts amount from one currency type to another. Uses the exchangeratesapi to calculate the values up. Has a cron job running everyday once to map the currency data in the database.
 
-Stack used:
-- NodeJS
-- Angular 12
-- MySQL database
+## Stack used
+    - NodeJS
+    - Angular 12
+    - MySQL database
 
 0. Walkthrough video: https://general-project-assets.s3.ap-south-1.amazonaws.com/currency-converter/currency_converter_walkthrough.mp4
 1. Install pm2 globally
