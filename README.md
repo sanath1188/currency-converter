@@ -1,7 +1,7 @@
 # currency-converter
 An app that converts amount from one currency type to another. Uses the exchangeratesapi to calculate the values up. Has a cron job running everyday once to map the currency data in the database.
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![alt text](https://github.com/sanath1188/currency-converter/blob/main/preview.png)
 
 ## Stack used
     - NodeJS
